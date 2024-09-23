@@ -1,10 +1,24 @@
-fastapi[standard]>=0.113.0,<0.114.0
-pydantic>=2.7.0,<3.0.0
-uvicorn
-pytest
-httpx
-bandit
-coverage
-black
-flake8
-mypy
+fastapi==0.103.0          # FastAPI framework for building APIs
+uvicorn==0.23.0           # ASGI server for running FastAPI applications
+sqlmodel==0.0.8           # SQLModel for Pydantic + SQLAlchemy integration
+psycopg2-binary==2.9.8    # PostgreSQL driver for connecting to the database
+alembic==1.11.2           # For database migrations (if you use Alembic)
+pydantic==1.9.0           # Data validation and settings management
+sqlalchemy==1.4.41        # SQLAlchemy core (SQLModel uses it under the hood)
+
+# Optional - If you want to use async database operations
+asyncpg==0.27.0           # Asynchronous PostgreSQL driver
+
+# Testing-related dependencies
+pytest==7.4.0             # Testing framework
+httpx==0.25.1             # HTTP client for making requests during tests
+pytest-asyncio==0.21.1    # Testing asynchronous code
+pytest-cov==4.1.0         # For generating test coverage reports
+
+# Optional - For handling environment variables (if needed)
+python-dotenv==1.0.0      # Manage environment variables from a .env file
+
+# Optional - Linting and formatting tools
+black==23.9.1             # Code formatter
+flake8==6.1.0             # Linting tool
+bandit==1.7.0             # Check Security

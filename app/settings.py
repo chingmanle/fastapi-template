@@ -3,6 +3,7 @@
 import os
 from dotenv import load_dotenv
 
+
 class Settings:
     DATABASE_URL: str
 
@@ -12,6 +13,7 @@ class Settings:
 
         if self.DATABASE_URL is None:
             raise ValueError("DATABASE_URL environment variable is not set!")
+
 
 # Create a single instance of the Settings
 settings = Settings()

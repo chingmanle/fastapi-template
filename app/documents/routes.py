@@ -6,10 +6,12 @@ from app.database import get_db
 
 router = APIRouter()
 
+
 @router.post("/", response_model=DocumentResponse)
 def create_document(document: DocumentCreate, db: Session = Depends(get_db)):
     service = DocumentService(db)
     return service.create_document(document)
+
 
 @router.get("/{document_id}", response_model=DocumentResponse)
 def get_document(document_id: int, db: Session = Depends(get_db)):

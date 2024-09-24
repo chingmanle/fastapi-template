@@ -1,6 +1,7 @@
 from sqlmodel import Session
 from app.users.models import User, UserCreate
 
+
 class UserService:
     def __init__(self, db: Session):
         self.db = db

@@ -19,8 +19,8 @@ services:
       - "8000:8000"
     depends_on:
       - db
-    environment:
-      - DATABASE_URL=postgres://myuser:mypassword@db/mydatabase
+    env_file:
+      - .env
 
 volumes:
   postgres_data:

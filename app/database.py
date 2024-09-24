@@ -1,6 +1,8 @@
+from app.settings import settings
 from sqlmodel import SQLModel, create_engine, Session
 
-DATABASE_URL = "postgresql://myuser:mypassword@db/mydatabase"
+# Configure database from singleton setting
+DATABASE_URL = settings.DATABASE_URL
 
 engine = create_engine(DATABASE_URL)
 

@@ -48,6 +48,10 @@ flake8: ## run flake8 on the codebase
 mypy: ## run flake8 on the codebase
 	docker-compose run --rm web mypy app
 
+.PHONY: copy-env
+copy-env: ## run flake8 on the codebase
+	cp .env.sample .env
+
 
 .PHONY: help
 help:  ## Print this help information.

@@ -1,20 +1,12 @@
-# Use the official Python image
-FROM python:3.10-slim
+# Dockerfile
+FROM python:3.11
 
-# Set the working directory
 WORKDIR /app
 
-# Copy the requirements file
-COPY requirements.txt .
+# Copy the entire app directory
+COPY ./app /app
 
-# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire app
-COPY . .
-
-# Expose port 8000 for FastAPI
-EXPOSE 8000
-
-# Run the FastAPI server
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Use main:app since main.py is directly under /app
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]

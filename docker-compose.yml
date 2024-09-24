@@ -22,5 +22,15 @@ services:
     env_file:
       - .env
 
+  test:
+    build: .
+    command: pytest
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    env_file:
+      - .env
+
 volumes:
   postgres_data:

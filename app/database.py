@@ -1,5 +1,5 @@
 from app.settings import settings
-from sqlmodel import SQLModel, create_engine, Session
+from sqlmodel import create_engine, Session
 
 # Configure database from singleton setting
 DATABASE_URL = settings.DATABASE_URL

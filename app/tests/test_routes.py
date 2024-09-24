@@ -13,7 +13,9 @@ def test_create_user():
 
 
 def test_get_user():
-    response = client.post("/users/", json={"name": "Bob", "email": "bob@example.com"})
+    response = client.post(
+        "/users/", json={"name": "Bob", "email": "bob@example.com"}
+    )
     created_user = response.json()
 
     response = client.get(f"/users/{created_user['id']}")

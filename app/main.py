@@ -1,7 +1,8 @@
 from fastapi import FastAPI
+from sqlmodel import SQLModel
 from app.users.routes import router as users_router
 from app.documents.routes import router as documents_router
-from app.database import engine, SQLModel
+from app.database import engine
 
 app = FastAPI()
 

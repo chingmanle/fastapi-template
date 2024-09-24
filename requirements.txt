@@ -22,3 +22,4 @@ python-dotenv==1.0.0      # Manage environment variables from a .env file
 black==23.9.1             # Code formatter
 flake8==6.1.0             # Linting tool
 bandit==1.7.0             # Check Security
+mypy==1.5.1               # Type annotations

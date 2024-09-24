@@ -1,4 +1,5 @@
 from sqlmodel import Session
+from typing import Optional
 from app.users.models import User, UserCreate
 
 
@@ -13,5 +14,5 @@ class UserService:
         self.db.refresh(new_user)
         return new_user
 
-    def get_user(self, user_id: int) -> User:
+    def get_user(self, user_id: int) -> Optional[User]:
         return self.db.get(User, user_id)

@@ -1,4 +1,5 @@
 from sqlmodel import Session
+from typing import Optional
 from app.documents.models import Document, DocumentCreate
 
 
@@ -15,5 +16,5 @@ class DocumentService:
         self.db.refresh(new_document)
         return new_document
 
-    def get_document(self, document_id: int) -> Document:
+    def get_document(self, document_id: int) -> Optional[Document]:
         return self.db.get(Document, document_id)

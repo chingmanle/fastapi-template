@@ -7,7 +7,7 @@ from app.database import get_db
 router = APIRouter()
 
 
-@router.post("/", response_model=UserResponse)
+@router.post("/", response_model=UserResponse, status_code=201)
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
     service = UserService(db)
     return service.create_user(user)

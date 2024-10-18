@@ -1,4 +1,4 @@
-# fastapi-template
+# FastAPI Template
 
 ## Overview
 

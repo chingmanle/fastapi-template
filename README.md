@@ -1,4 +1,4 @@
-# FastAPI Template
+# Buzzd8-backend
 
 ## Overview
 
